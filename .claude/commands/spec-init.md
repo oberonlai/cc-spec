@@ -3,30 +3,32 @@ description: Initialize a new specification with detailed project description an
 allowed-tools: Bash, Read, Write, Glob
 ---
 
-# Spec Initialization
+# Spec Initialization (Enforced Interactive Mode)
 
 Initialize a new specification based on the provided project description:
 
 **Project Description**: $ARGUMENTS
 
-## Interactive Clarification
+## Enforced Interactive Clarification Phase
 
-### 1. Analyze Input and Detect Gaps
-- Identify unclear or missing information from $ARGUMENTS
-- Common gaps include:
-  - Target users and personas
-  - Success criteria or KPIs
-  - Integration points or dependencies
-  - Edge cases and constraints
-  - Priority features vs. optional features
+### Mandatory Rule
+- **This phase CANNOT be skipped**.
+- Regardless of input completeness, always ask at least 3 clarification questions.
+- Wait for user responses **before proceeding** to file generation.
 
-### 2. Generate Clarifying Questions
-- Prepare 10 concise, open-ended questions
-- Goal: help user refine ideas, reveal hidden assumptions, clarify ambiguous details
+### Purpose
+- Ensure hidden assumptions are uncovered
+- Help user clarify priorities, success criteria, edge cases
+- Capture additional details that user did not initially consider
 
-### 3. Collect User Responses
-- Present questions sequentially to the user
-- After receiving answers, summarize them clearly
+### Process
+1. **Analyze Input** ($ARGUMENTS)
+   - Detect vague or missing details
+2. **Ask Clarifying Questions**
+   - Minimum 5, maximum 10
+   - Use simple, open-ended wording
+3. **Wait for Responses**
+   - Do not proceed until answers are provided
 
 ## Steering Context Validation
 

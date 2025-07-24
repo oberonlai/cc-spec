@@ -11,7 +11,7 @@ This project implements Kiro-style Spec-Driven Development for Claude Code using
 - Custom steering docs for specialized contexts
 
 ### Active Specifications
-- Current spec: Check `.kiro/specs/` for active specifications
+- **ai-auto-slug-plugin**: WordPress AI-powered slug generator (initialized)
 - Use `/spec-status [feature-name]` to check progress
 
 ## Development Guidelines
@@ -31,6 +31,17 @@ This project implements Kiro-style Spec-Driven Development for Claude Code using
 **Note**: For new features or empty projects, steering is recommended but not required. You can proceed directly to spec-requirements if needed.
 
 ### Phase 1: Specification Creation
+
+#### New Clarification Phase
+- Immediately after `/spec-init`, AI **must**:
+  1. Analyze project description for unclear or missing details
+  2. Ask **5–10 clarification questions**
+  3. Wait for user responses
+  4. Merge responses into `requirements.md` under **Clarification Responses**
+  5. Mark `clarifications_collected: true` in `spec.json`
+
+If user refuses or skips, record as `"No additional input provided"` in Clarification Responses.
+
 ```
 /spec-init [feature-name]           # Initialize spec structure only
 /spec-requirements [feature-name]   # Generate requirements → Review → Edit if needed
