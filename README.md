@@ -2,6 +2,8 @@
 
 A Kiro-style Spec-Driven Development framework for Claude Code using hooks and slash commands.
 
+**Original Author**: [gotalab](https://github.com/gotalab/claude-code-spec)
+
 ## Overview
 
 This project implements a structured development workflow that follows a rigorous 3-phase approval process: Requirements → Design → Tasks → Implementation. It leverages Claude Code's hook system and custom slash commands to automate progress tracking and maintain project context.
